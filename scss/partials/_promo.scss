@@ -1,0 +1,104 @@
+.promo {
+  min-height: 50vh;
+  padding: 60% 0;
+  background: url(../images/header-bg.png) center/cover no-repeat;
+
+  @include screen(md) {
+    padding: 30% 0;
+  }
+
+  @include screen(xl) {
+    padding: 12% 0;
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 75px;
+    color: rgba(255,255,255,0.92);
+    font-size: 36px;
+    line-height: 1.4;
+    font-family: $font-title;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    
+    @include screen(sm) {
+      font-size: 45px;
+    }
+
+    @include screen(md) {
+      font-size: 60px;
+    }
+
+    @include screen(lg) {
+      font-size: 75px;
+    }
+
+    @include screen(xl) {
+      font-size: 90px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 232px;
+      height: 43px;
+      background: url(../images/decor.png) no-repeat;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include screen(md) {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 35px;
+    }
+
+    &-item {
+      max-width: 200px;
+      margin: 10px auto;
+      padding: 10px 40px;
+      color: #fff;
+
+      @include screen(md) {
+        margin: 0;
+      }
+
+      @include screen(lg) {
+        max-width: 230px;
+        padding: 15px 50px;
+        font-size: 16px;
+      }
+
+      &_primary {
+        background: rgba(0, 0, 0, .5);
+        border: 1px solid #000;
+
+        &:hover {
+          background: rgba(0, 0, 0, .8);
+        }
+      }
+
+      &_secondary {
+        background: rgba(255, 255, 255, .2);
+        border: 1px solid #fff;
+
+        @include screen(md) {
+          margin-left: 30px;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, .5);
+        }
+      }
+    }
+  }
+}

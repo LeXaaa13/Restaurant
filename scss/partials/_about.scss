@@ -1,0 +1,63 @@
+.about {
+	padding: 50px 0;
+	background: url(../images/about-bg.png) center/cover no-repeat;
+	text-align: center;
+
+	&__content {
+
+		@include screen(md) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__inner {
+
+		&-title {
+			position: relative;
+			padding-bottom: 50px;
+			color: $color-title;
+
+			@include screen(md) {
+				font-size: 42px;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 245px;
+				height: 25px;
+				background: url(../images/decor-yellow.png) no-repeat;
+			}
+		}
+
+		&-text {
+			max-width: 300px;
+			font-size: 16px;
+			color: $color-font;
+
+			@include screen(md) {
+				max-width: 430px;
+				margin: 0 auto; 
+				font-size: 18px;
+			}
+		}
+
+		&-signature {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto 10px;
+			padding-left: 18%;
+
+			@include screen(md) {
+				width: 220px;
+				height: 220px;
+				padding-left: 9%;
+			} 
+		}
+	}
+}

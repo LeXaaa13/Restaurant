@@ -1,0 +1,151 @@
+.reservation {
+	padding: 50px 0;
+	background: url(../images/about-bg.png) center/cover no-repeat;
+	text-align: center;
+	color: $color-title;
+	font-family: $font-base;
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-base {
+
+			@include screen(lg) {
+				max-width: 60%;
+			}
+
+			@include screen(xl) {
+				max-width: 50%;
+			}
+
+			@include screen(xl) {
+				margin-bottom: 20px;
+			}
+
+			&_title {
+				position: relative;
+				padding-bottom: 30px;
+				font-size: 32px;
+
+				@include screen(md) {
+					font-size: 42px;
+				}
+
+				@include screen(lg) {
+					margin-left: 100px;
+					margin-bottom: 20px;
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 250px;
+					height: 25px;
+					background: url(../images/decor-yellow.png) no-repeat;
+				}
+			}
+			
+			&_inner {
+
+        @include screen(lg) {
+					margin-left: 100px;
+				}
+
+				&-text {
+					color: $color-font;
+
+					@include screen(md) {
+						max-width: 65%;
+						margin: 0 auto;
+					}
+
+					@include screen(lg) {
+						max-width: 80%;
+					}
+				}
+
+				&-form {
+					text-align: center;
+					margin-bottom: 30px;
+
+					input {
+						padding: 5px 10px;
+						background: rgba(255, 255, 255, 0.4);
+						border: 1px solid #ccc;
+
+						@include screen(md) {
+							width: 230px;
+						}
+
+						@include screen(lg) {
+							width: 180px;
+						}
+					}
+
+					&-input {
+						max-height: 50px;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						@include screen(md) {
+							display: inline-block;
+							text-align: left;
+
+							&:nth-child(2),
+							&:nth-child(4) {
+								margin-left: 20px;
+							}
+						}
+					}
+
+					&-title {
+						font-family: $font-form;
+						font-weight: 700;
+						margin-top: 20px;
+
+						@include screen(md) {
+							margin-bottom: 0;
+						}
+					}
+
+					&-btn {
+					  padding: 10px 40px;
+					  background: #c89f2d;
+					  color: #fff;
+				  }
+				}
+			}
+		}
+
+		&-secondary {
+			display: none;
+
+			@include screen(lg) {
+				display: flex;
+				max-width: 25%;
+			}
+
+			img {
+				width: 220px;
+				height: 450px;
+				margin-right: 20px;
+
+				@include screen(lg) {
+				  width: 270px;
+				  height: 507px;
+				  margin-right: 20px;
+			  }
+
+			  @include screen(xl) {
+				  margin-right: 30px;
+			  }
+			}
+		}
+	}	
+}

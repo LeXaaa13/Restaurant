@@ -1,0 +1,143 @@
+.menu {
+	padding: 50px 0;
+	background: url(../images/menu-bg.png) center/cover no-repeat;
+	text-align: center;
+	color: $color-title;
+	font-family: $font-title;
+
+	@include screen(md) {
+		padding-bottom: 0;
+	}
+
+  &__content {
+
+  	@include screen(md) {
+  	  display: flex;
+  	  justify-content: space-between;
+  	  flex-wrap: wrap;
+  	}
+
+  	@include screen(lg) {
+  	  justify-content: space-around;
+  	}
+  }
+
+	&__list {
+		padding-bottom: 50px;
+		
+		@include screen(md) {
+			&:nth-child(2),
+			&:nth-child(4) {
+			  padding-bottom: 0;
+			}
+		}
+
+		&-title {
+			margin: 0;
+		}
+		
+		@include screen(md) {
+		  &:nth-child(4) {
+		  	transform: translateY(-20%);
+		  }
+		}
+
+		@include screen(lg) {
+		  &:nth-child(4) {
+		  	transform: translateY(-21%);
+		  }
+		}
+
+		&-item {
+			max-width: 320px;
+			margin: 0 auto;
+			padding: 0 10px; 
+
+			@include screen(lg) {
+				max-width: 455px;
+				margin-bottom: 25px;
+  	  }
+
+			&_special {
+				position: relative;
+				margin: 0 auto;
+				padding: 0 10px; 
+				border: 1px solid;
+				border-image: linear-gradient(to right, rgba($color-title, .2),rgba($color-title, .5)) 1;
+				
+				&::after {
+          content: 'Special';
+          position: absolute;
+          top: -26px;
+          left: 90%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 25px;
+          background: rgba($color-title, .75);
+          color: #fff;
+          font-family: $font-title;
+
+          @include screen(md) {
+            width: 65px;
+  	      }
+
+  	      @include screen(lg) {
+            width: 80px;
+  	      }
+        }
+			}
+
+			&_head {
+				position: relative;
+			  display: flex;
+			  justify-content: space-between;
+			  border-bottom: 1px solid rgba($color-title, .5);
+
+			  h3 {
+					margin: 10px 0;
+
+					@include screen(lg) {
+            font-size: 21px;
+  	      }
+				}
+		  }
+
+			&_price {
+				margin: 10px 0;
+				font-family: $font-title;
+				font-weight: 700;
+				font-size: 18px;
+
+				@include screen(lg) {
+          font-size: 21px;
+  	    }
+			}
+
+		  &_text {
+		  	font-family: $font-base;
+		  	color: $color-font;
+		  }
+		}
+	}
+
+	&__list-title {
+		position: relative;
+		padding-bottom: 30px;
+		font-size: 32px;
+
+		@include screen(md) {
+		  font-size: 42px;
+	  }
+
+		&::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 245px;
+      height: 25px;
+      background: url(../images/decor-yellow.png) no-repeat;
+    }
+	}
+}
